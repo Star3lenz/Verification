@@ -1,3 +1,6 @@
-**HELLO WORLD**
+**INSTALLTION**
+- Download skipt and install it.
+- Drag the file into the scripts folder.
 
-THIS IS TEST
+**REQUEST**
+- Skript
