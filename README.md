@@ -3,4 +3,4 @@
 - Drag the file into the scripts folder.
 
 **REQUEST**
-- Skript
+- Skript (https://github.com/SkriptLang/Skript/releases)
