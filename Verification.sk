@@ -1,0 +1,37 @@
+options:
+	stafflist: "YTKNCASTER" or "Star3lenz_"
+	
+	stafffirst: YTKNCASTER
+	sha-1-pass1: exampass1
+
+	staffsecond: Star3lenz_
+	sha-1-pass2: exampass2
+
+	prefix: [Verification]
+	notificationtoconsole: true
+	successmsg: &fสำเร็จ! คุณได้รับสิทธิ์ในการเข้าถึงคำสั่งต่าง ๆ แล้ว!
+
+command /verification [<text>]:
+	trigger:
+		if player is {@stafflist}:
+			if player is "{@stafffirst}":
+				if arg-1 is set:
+					if arg-1 is "{@sha-1-pass1}":
+						send "{@successmsg}"
+						op player
+						if {@notificationtoconsole} is true:
+							set {logintime} to now
+							send "&e{@prefix} {@stafffirst} has login on %{logintime}%" to console
+			if player is "{@staffsecond}":
+				if arg-1 is set:
+					if arg-1 is "{@sha-1-pass2}":
+						send "{@successmsg}"
+						op player
+						if {@notificationtoconsole} is true:
+							set {logintime} to now
+							send "&e{@prefix} {@staffsecond} has login on %{logintime}%" to console
+		else:
+			send "Unknown command. Type ""/help"" for help."
+
+#This script is licensed by Star3lenz, no further modification or commercial use is permitted.
+#You can see some permissions from the information in the discord in license channel. Join us: https://discord.gg/NdBU5w2Rt7
